@@ -29,12 +29,12 @@ function SearchBar(props) {
 
             {
                 !loading1 && searchData ?
-                    <div className="search-card" onClick={(event)=>props.getPoke(searchData)}>
+                    <div className="search-card" onClick={(event) => props.getPoke(searchData)}>
                         <h2>{searchData.id}</h2>
                         <img src={searchData.sprites.front_default} alt="" />
                         <h2>{searchData.name}</h2>
                     </div> :
-                    <h1>Pokemon not found</h1>
+                    null
             }
 
 

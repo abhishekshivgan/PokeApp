@@ -1,7 +1,9 @@
 import React from 'react';
 
+
 const Pokeinfo = ({ data }) => {
     // console.log(data);
+
     return (
         <>
             {
@@ -14,7 +16,7 @@ const Pokeinfo = ({ data }) => {
                                 data.abilities.map((poke, key) => {
                                     return (
                                         <>
-                                            <div key={key}className='group'>
+                                            <div key={key} className='group'>
                                                 <h2>{poke.ability.name}</h2>
                                             </div>
                                         </>
@@ -26,7 +28,7 @@ const Pokeinfo = ({ data }) => {
 
                         <div className='base-stat'>
                             {
-                                data.stats.map(poke=>{
+                                data.stats.map(poke => {
                                     return (
                                         <>
                                             <h3>{poke.stat.name} : {poke.base_stat}</h3>
@@ -36,6 +38,7 @@ const Pokeinfo = ({ data }) => {
                             }
 
                         </div>
+                        
                     </>
                 )
             }
